@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Info Geolocation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-item">IP: <span id="userIp">Fetching...</span></div>
+    </header>
+    <div class="container">
+        <aside>
+            <h3>Update Log</h3>
+            <div class="log-item">Nothing yet</div>
+            <hr class="fading-line">
+            <div class="sidebar-section">
+                <h3>Themes</h3>
+                <label for="colorPicker">Select Background Color:</label>
+                <input type="color" id="colorPicker">
+            </div>
+            <hr class="fading-line">
+            <div class="sidebar-section">
+                <h3>IP History</h3>
+                <ul id="ipHistory" class="ip-history"></ul>
+            </div>
+            <hr class="fading-line">
+            <div class="sidebar-section credits">
+                <p>Developed by Sirius</p>
+                <p>Design by Sirius</p>
+            </div>
+        </aside>
+        <main>
+            <div class="main-content">
+                <h1>IP Address Info</h1>
+                <form id="ipForm" class="ip-form">
+                    <input type="text" id="ipInput" placeholder="Enter IP Address">
+                    <button type="submit">Get Info</button>
+                </form>
+                <hr class="fading-line">
+                <div id="output"></div>
+                <hr class="fading-line">
+                <div id="map" class="map"></div>
+                <hr class="fading-line">
+                <div class="weather-info">
+                    <h3>Weather</h3>
+                    <p id="weather">N/A</p>
+                </div>
+                <div class="datetime-info">
+                    <h3>Date & Time</h3>
+                    <p id="datetime">Fetching date and time...</p>
+                </div>
+                <hr class="fading-line">
+                <div class="export-buttons">
+                    <button id="exportText">Export as Text</button>
+                </div>
+            </div>
+            <div class="discord-widget">
+                <iframe src="https://discord.com/widget?id=1247637350943817788&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            </div>
+        </main>
+    </div>
+    <footer>
+        &copy; 2024 IpSearch.is. All rights reserved.
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
